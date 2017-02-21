@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin: 100px auto;
+            transition:all 1s;
+        }
+        .box:hover{
+
+            /*
+            错误写法
+            transform:rotate(60deg);
+            transform:scale(2); */
+            /* 正确的写法：多个2D效果共存，采用连写的方式 */
+            transform:rotate(60deg) scale(2);
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
