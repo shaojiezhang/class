@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* 需求：两侧固定 中间自适应
+		（1）左侧 右侧盒子写死宽高，并且一个左浮动，一个右浮动
+		（2）中间的盒子不写宽度，直接用margin去挤
+		（3）浮动的盒子在结构上一定是在标准流的盒子的前面 口诀：先浮后标 */
+
+		.box {
+			width: 80%;
+			height: 300px;
+			background-color: red;
+			margin: 100px auto;
+		}
+		.left,.right {
+			width: 20%;
+			height: 300px;
+			background-color: green;
+		}
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+		.center {
+			height: 300px;
+			background-color: blue;
+			margin: 0 21%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="left"></div>
+		<div class="right"></div>
+		<div class="center"></div>
+	</div>
+</body>
+</html>
